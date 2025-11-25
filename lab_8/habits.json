@@ -1,0 +1,99 @@
+{
+  "8090875690": [
+    {
+      "id": "d79bc",
+      "user_id": 8090875690,
+      "name": "📚 Читання",
+      "goal_days": 7,
+      "completed_days": [],
+      "reminder_time": null
+    }
+  ],
+  "5107668093": [],
+  "7179429608": [
+    {
+      "id": "89d86",
+      "user_id": 7179429608,
+      "name": "📝 Ведення щоденника",
+      "goal_days": 7,
+      "completed_days": [],
+      "reminder_time": null
+    },
+    {
+      "id": "031f0",
+      "user_id": 7179429608,
+      "name": "🚶 Прогулянка",
+      "goal_days": 7,
+      "completed_days": [],
+      "reminder_time": null
+    },
+    {
+      "id": "9baa3",
+      "user_id": 7179429608,
+      "name": "Сидіти в тт",
+      "goal_days": 7,
+      "completed_days": [],
+      "reminder_time": null
+    },
+    {
+      "id": "ae948",
+      "user_id": 7179429608,
+      "name": "Дивитись фільми в дворами",
+      "goal_days": 7,
+      "completed_days": [],
+      "reminder_time": null
+    },
+    {
+      "id": "4a48a",
+      "user_id": 7179429608,
+      "name": "Пити по вечорам🍻",
+      "goal_days": 7,
+      "completed_days": [],
+      "reminder_time": null
+    },
+    {
+      "id": "3fe06",
+      "user_id": 7179429608,
+      "name": "Спати",
+      "goal_days": 7,
+      "completed_days": [],
+      "reminder_time": null
+    },
+    {
+      "id": "e97ab",
+      "user_id": 7179429608,
+      "name": "Спатоньки❤️",
+      "goal_days": 7,
+      "completed_days": [],
+      "reminder_time": null
+    }
+  ],
+  "889134548": [
+    {
+      "id": "94fa0",
+      "user_id": 889134548,
+      "name": "📚 Читання",
+      "goal_days": 21,
+      "completed_days": [],
+      "reminder_time": "18:00"
+    },
+    {
+      "id": "80136",
+      "user_id": 889134548,
+      "name": "😴 Здоровий сон (8 годин)",
+      "goal_days": 21,
+      "completed_days": [],
+      "reminder_time": null
+    },
+    {
+      "id": "e977d",
+      "user_id": 889134548,
+      "name": "🚶 Прогулянка",
+      "goal_days": 21,
+      "completed_days": [
+        "2025-11-25"
+      ],
+      "reminder_time": null
+    }
+  ]
+}
