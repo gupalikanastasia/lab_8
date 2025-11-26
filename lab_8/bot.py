@@ -34,7 +34,7 @@ def main():
     print("Запуск бота...")
     app = Application.builder().token(BOT_TOKEN).build() #Створюємо бота
 
-    text_filter = filters.TEXT & ~filters.COMMAND
+    text_filter = filters.TEXT & ~filters.COMMAND    # Спільний фільтр для текстових повідомлень
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start_command)], #Команда старт
@@ -92,4 +92,5 @@ def main():
 
 
 if __name__ == '__main__':
+
     main()
