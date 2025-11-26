@@ -11,9 +11,10 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return HabitTrackerStates.MAIN_MENU
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    text = "💡 Довідка:\n1. Додай звичку\n2. Відмічай виконання\n3. Слідкуй за прогресом"
+    text = "💡 Використовуй меню внизу екрану"
     await update.message.reply_text(text)
 
 async def cancel_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Скасовано.", reply_markup=main_menu_keyboard())
+
     return HabitTrackerStates.MAIN_MENU
