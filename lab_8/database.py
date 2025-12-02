@@ -24,14 +24,14 @@ class Database:
     def load(self):
         if os.path.exists(DATA_FILE):       # Чи існує файл habits.json?
             with open(DATA_FILE, 'r', encoding='utf-8') as f:
-                self.data = json.load(f)     # Якщо так — читай і запам'ятовуй
+                self.data = json.load(f)     # Якщо так — читай і перетворюємо текст у словник Python
 
     def save(self):
         with open(DATA_FILE, 'w', encoding='utf-8') as f:     # Записуємо дані з пам'яті у файл на диск
             json.dump(self.data, f, ensure_ascii=False, indent=2)
 
     def add_habit(self, user_id, name, goal_days):
-        habit_id = str(uuid.uuid4())[:5]  # Генеруємо короткий ID
+        habit_id = str(uuid.uuid4())[:5]  # Генеруємо ID
 
         new_habit = Habit(
             id=habit_id,
@@ -56,9 +56,9 @@ class Database:
         user_habits = self.data.get(str(user_id), [])
 
         for habit in user_habits:
-            if habit['id'] == habit_id:
-                if today not in habit['completed_days']:    # Якщо сьогодні ще не відмічали...
-                    habit['completed_days'].append(today)   # ...додаємо дату в список
+            if habit['id'] == habit_id:                     # Шукаємо потрібну звичку за ID
+                if today not in habit['completed_days']:    # Перевірка: чи не натиснув він це вже сьогодні?
+                    habit['completed_days'].append(today)   # Додаємо дату
                     self.save()
                     return True
         return False
@@ -86,6 +86,7 @@ class Database:
                 self.save()
                 return True
         return False
+
 
 
 db = Database()
