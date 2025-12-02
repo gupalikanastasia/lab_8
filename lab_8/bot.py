@@ -19,10 +19,10 @@ logging.basicConfig(
 ) #Вигляд повідомлень в консолі
 
 
-async def send_reminders(context): #Перевірка/відправка нагадувань
-    current_time = datetime.now().strftime('%H:%M')
-    habits = db.get_habits_with_reminders()
-    for user_id, habit in habits:
+async def send_reminders(context):                             #Перевірка/відправка нагадувань
+    current_time = datetime.now().strftime('%H:%M')            # Отримуємо поточний час, наприклад "14:30"
+    habits = db.get_habits_with_reminders()                    # Питаємо базу: кому треба нагадати?
+    for user_id, habit in habits:                              # Перебираємо всіх знайдених людей
         if habit.reminder_time == current_time:
             try:
                 await context.bot.send_message(chat_id=user_id, text=f"🔔 Час для звички: {habit.name}")
@@ -94,3 +94,4 @@ def main():
 if __name__ == '__main__':
 
     main()
+
